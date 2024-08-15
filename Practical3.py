@@ -76,7 +76,7 @@ def count(string, substring, flag):
     length = len(substring)
 
     while start < len(string):
-        # Find the next occurrence of the substring
+        
         pos = string.find(substring, start)
         
         if pos == -1:
@@ -85,10 +85,8 @@ def count(string, substring, flag):
         count += 1
         
         if flag:
-            # Allow overlapping: move start by one character
             start = pos + 1
         else:
-            # No overlapping: move start beyond the current match
             start = pos + length
 
     return count
